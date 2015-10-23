@@ -14,6 +14,8 @@ Inspiration: [Thanks Rovane Durso](https://dribbble.com/shots/998479-Music)
 * ~~prev/next song~~
 * Drag n Drop of the songs
 * Better volume control
+* List of the songs
+* Drag of the progress bar
 
 
 ## Demo & Examples
