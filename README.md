@@ -54,11 +54,11 @@ var CLAudioPlayer = require('react-cl-audio-player');
 ### Properties
 
 * songs - An array with the object songs - required
-* * url - string
-* * cover - string - optional
-* * artist - object
-* * * name - string
-* * * song - string
+* songs[0].url - string
+* songs[0].cover - string - optional
+* songs[0].artist - object
+* songs[0].artist.name - string
+* songs[0].artist.song - string
 * autoplay - Is autoplay?
 
 Songs model:
