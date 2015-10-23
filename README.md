@@ -2,6 +2,8 @@
 
 A simple audio player with ReactJS and CSS3.
 
+Inspiration: [Thanks Rovane Durso](https://dribbble.com/shots/998479-Music)
+
 ## TODO
 
 * ~~shuffle~~
