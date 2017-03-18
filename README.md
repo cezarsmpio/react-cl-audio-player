@@ -20,7 +20,7 @@ Inspiration: [Thanks Rovane Durso](https://dribbble.com/shots/998479-Music)
 
 ## Demo & Examples
 
-Live demo: [CezarLuiz0.github.io/react-cl-audio-player](http://CezarLuiz0.github.io/react-cl-audio-player/)
+Live demo: [cezarlz.github.io/react-cl-audio-player/](http://cezarlz.github.io/react-cl-audio-player/)
 
 To build the examples locally, run:
 
