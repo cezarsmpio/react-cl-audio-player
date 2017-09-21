@@ -1,0 +1,119 @@
+/* Player */
+.no-height {
+  height: 0 !important;
+}
+.player-container {
+  width: 435px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #EAEDEF;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.player-cover {
+  height: 160px;
+  background-position: top center;
+  background-size: cover;
+  transition: height .4s;
+}
+.artist-info {
+  padding: 60px 35px 35px;
+}
+.artist-name,
+.artist-song-name {
+  margin: 0;
+}
+.artist-name {
+  margin-bottom: 5px;
+  font-size: 32px;
+  font-weight: 400;
+}
+.artist-song-name {
+  font-size: 18px;
+  font-weight: 400;
+}
+.player-progress-container {
+  position: relative;
+  width: 365px;
+  height: 9px;
+  margin: 0 auto;
+  background-color: #414141;
+  border-radius: 40px;
+}
+.player-progress-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #CDD2D8;
+  border-radius: 40px;
+}
+.player-progress-value:after {
+  position: absolute;
+  top: -3px;
+  right: -6px;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #7748B5;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px 2px;
+}
+.player-options {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0 20px;
+  width: 365px;
+  margin: 0 auto;
+}
+.player-buttons {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 135px;
+}
+.player-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #D2D7DB;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  outline: 0;
+  transition: all .4s;
+}
+.player-btn i {
+  font-size: 28px;
+  margin: 0 auto;
+}
+.player-btn.active {
+  color: #838C92;
+}
+.player-btn.big {
+  width: 70px;
+  height: 70px;
+}
+.player-btn.big i {
+  font-size: 36px;
+}
+.player-btn.medium {
+  width: 50px;
+  height: 50px;
+}
+.player-btn.medium i {
+  font-size: 15px;
+}
+.player-btn.volume {
+  width: 40px;
+}
+.player-btn:disabled {
+  opacity: .5;
+}
+.player-controls {
+  width: 180px;
+}
+.player-controls .player-btn {
+  color: #D9D9D9;
+  background-color: #414141;
+}
