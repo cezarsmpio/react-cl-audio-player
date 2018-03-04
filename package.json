@@ -13,8 +13,7 @@
   "scripts": {
     "build": "nwb build-react-component --copy-files",
     "clean": "nwb clean-module && nwb clean-demo",
-    "start": "nwb serve-react-demo",
-    "prepare": "npm run build"
+    "start": "nwb serve-react-demo"
   },
   "dependencies": {},
   "peerDependencies": {
