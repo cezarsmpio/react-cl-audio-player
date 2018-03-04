@@ -1,6 +1,6 @@
 {
   "name": "react-cl-audio-player",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "react-cl-audio-player React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -11,27 +11,34 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-react-component",
+    "build": "nwb build-react-component --copy-files",
     "clean": "nwb clean-module && nwb clean-demo",
     "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "prepare": "npm run build"
   },
   "dependencies": {},
   "peerDependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.1",
     "react": "16.x"
   },
   "devDependencies": {
     "nwb": "0.21.x",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "classnames": "^2.2.5"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Cezar Luiz <cezarluiz.c@gmail.com>",
+  "homepage": "http://cezarlz.github.io/react-cl-audio-player",
   "license": "MIT",
-  "repository": "",
+  "repository": "git@github.com:cezarlz/react-cl-audio-player.git",
   "keywords": [
-    "react-component"
+    "react-component",
+    "audio",
+    "audio-player",
+    "react",
+    "lib",
+    "mp3",
+    "songs"
   ]
 }
