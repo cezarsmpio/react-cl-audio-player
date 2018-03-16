@@ -61,6 +61,19 @@ class AudioPlayer extends PureComponent {
     });
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      active: nextProps.songs[0],
+      songs: nextProps.songs,
+      current: 0,
+      progress: 0,
+      random: false,
+      playing: !!nextProps.autoplay,
+      repeat: false,
+      mute: false,
+    });
+  }
+
   shuffle = arr => arr.sort(() => Math.random() - 0.5);
 
   updateProgress = () => {
