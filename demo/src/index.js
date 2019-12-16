@@ -89,7 +89,6 @@ ReactDOM.render(
     <AudioPlayer songs={songs} />
 
     <div class="footer">Copyright &copy; 2018 Cezar Luiz.</div>
-    <div class="footer">Copyright &copy; 2019 Dejan.</div>
   </div>,
   document.querySelector('#demo')
 );
