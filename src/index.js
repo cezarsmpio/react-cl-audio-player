@@ -50,7 +50,11 @@ class AudioPlayer extends PureComponent {
       props.onTimeUpdate(e);
     });
     this.audio.addEventListener("ended", e => {
-      if (songs.length > 1 || repeat) this.next();
+      if (this.state.songs.length > 1 || this.state.repeat) {
+        this.next();
+      } else {
+        this.setState({ playing: false, progress: 0 });
+      }
 
       props.onEnded(e);
     });
