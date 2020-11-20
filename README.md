@@ -20,7 +20,7 @@ Inspiration: [Thanks Rovane Durso](https://dribbble.com/shots/998479-Music)
 
 ## Demo & Examples
 
-Live demo: http://cezarlz.github.io/react-cl-audio-player/
+Live demo: http://cezarsmpio.github.io/react-cl-audio-player/
 
 To run it on your local environment:
 
@@ -42,6 +42,7 @@ Then open [`localhost:3000`](http://localhost:3000).
 
 
 ## Installation
+
 
 ```
 npm install react-cl-audio-player --save
