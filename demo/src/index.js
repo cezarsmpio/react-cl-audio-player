@@ -90,5 +90,5 @@ ReactDOM.render(
 
     <div class="footer">Copyright &copy; 2018 Cezar Luiz.</div>
   </div>,
-  document.querySelector('#demo'),
+  document.querySelector('#demo')
 );

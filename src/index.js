@@ -50,7 +50,11 @@ class AudioPlayer extends PureComponent {
       props.onTimeUpdate(e);
     });
     this.audio.addEventListener('ended', e => {
-      this.next();
+      if (this.state.songs.length > 1 || this.state.repeat) {
+        this.next();
+      } else {
+        this.setState({ playing: false, progress: 0 });
+      }
 
       props.onEnded(e);
     });
@@ -86,7 +90,8 @@ class AudioPlayer extends PureComponent {
   };
 
   setProgress = e => {
-    const target = e.target.nodeName === 'SPAN' ? e.target.parentNode : e.target;
+    const target =
+      e.target.nodeName === 'SPAN' ? e.target.parentNode : e.target;
     const width = target.clientWidth;
     const rect = target.getBoundingClientRect();
     const offsetX = e.clientX - rect.left;
@@ -123,16 +128,16 @@ class AudioPlayer extends PureComponent {
     this.props.onPause();
   };
 
-  toggle = () => this.state.playing ? this.pause() : this.play();
+  toggle = () => (this.state.playing ? this.pause() : this.play());
 
   next = () => {
     const { repeat, current, songs } = this.state;
     const total = songs.length;
     const newSongToPlay = repeat
-                          ? current
-                          : current < total - 1
-                            ? current + 1
-                            : 0;
+      ? current
+      : current < total - 1
+      ? current + 1
+      : 0;
     const active = songs[newSongToPlay];
 
     this.setState({
@@ -206,39 +211,49 @@ class AudioPlayer extends PureComponent {
     });
 
     const playPauseClass = classnames({
-      'fa': true,
+      fa: true,
       'fa-play': !playing,
       'fa-pause': playing,
     });
 
     const volumeClass = classnames({
-      'fa': true,
+      fa: true,
       'fa-volume-up': !mute,
       'fa-volume-off': mute,
     });
 
     const randomClass = classnames({
       'player-btn small random': true,
-      'active': random,
-    })
+      active: random,
+    });
 
     const repeatClass = classnames({
       'player-btn small repeat': true,
-      'active': repeat,
+      active: repeat,
     });
 
-		return (
+    return (
       <div className="player-container">
-
-        <div className={coverClass} style={{backgroundImage: `url(${currentSong.cover || ''})`}}></div>
+        <div
+          className={coverClass}
+          style={{
+            backgroundImage: `url(${currentSong.cover || ''})`,
+          }}
+        ></div>
 
         <div className="artist-info">
           <h2 className="artist-name">{currentSong.artist.name}</h2>
           <h3 className="artist-song-name">{currentSong.artist.song}</h3>
         </div>
 
-        <div className="player-progress-container" onClick={e => this.setProgress(e)}>
-          <span className="player-progress-value" style={{width: progress + '%'}}></span>
+        <div
+          className="player-progress-container"
+          onClick={e => this.setProgress(e)}
+        >
+          <span
+            className="player-progress-value"
+            style={{ width: progress + '%' }}
+          ></span>
         </div>
 
         <div className="player-options">
@@ -290,10 +305,9 @@ class AudioPlayer extends PureComponent {
             </button>
           </div>
         </div>
-
       </div>
     );
-	}
+  }
 }
 
 export default AudioPlayer;
