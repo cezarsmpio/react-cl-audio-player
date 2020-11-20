@@ -1,6 +1,6 @@
 {
   "name": "react-cl-audio-player",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "react-cl-audio-player React component",
   "main": "lib/index.js",
   "module": "es/index.js",
